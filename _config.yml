@@ -1,8 +1,8 @@
 # Site settings
 title: ParaRec
 description: 'ParaRec - a parallel recommendation system'
-url: 'http://pavelkang.github.io/'
-baseurl: '/418finalproject'
+url: 'http://pavelkang.github.io/418finalproject/'
+baseurl: '/418finalproject/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
