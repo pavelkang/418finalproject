@@ -12,7 +12,7 @@ We designed and implemented a compact data structure which allows collaborative 
 
 ## Data Structure
 
-![data structure]({{site.url}}/assets/kai_kang.jpg "Logo Title Text 1")
+![data structure]({{site.url}}/assets/illustration.svg "Logo Title Text 1")
 
 ## Algorithm Implementation
 
