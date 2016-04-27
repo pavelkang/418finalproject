@@ -12,7 +12,7 @@ We designed and implemented a compact data structure which allows collaborative 
 
 ## Data Structure
 
-![data structure](https://gist.githubusercontent.com/pavelkang/66b25d55b27cc8ab016670e797c2141a/raw/f4faaa9c0f1c9570ed0b4f3b50ea1865bab7c733/illustration.svg "Logo Title Text 1")
+![data structure]({{site.url}}/assets/kai_kang.jpg "Logo Title Text 1")
 
 ## Algorithm Implementation
 
