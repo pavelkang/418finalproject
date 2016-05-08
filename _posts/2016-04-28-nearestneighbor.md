@@ -19,3 +19,5 @@ However, let's say we only want approximate nearest neighbors, then we can take 
 
 Here is an illustration of the parallel locality sensitive hashing algorithm we are going to implement:
 ![Locality Sensitive Hashing]({{site.url}}/assets/lsh.svg "Logo Title Text 1")
+
+## Parallel Min-hashing
