@@ -90,4 +90,6 @@ To calculate item preferences, instead of finding common items, we want to find 
 
 ## Performance
 
-We have measured the performance only on one test set so far but it is 2x better.
+We have tested four implementations on two datasets of size 100k and 10m. The four implementations are: a serial CPU version, a naive CUDA implementation, a $$O(mn)$$ naive algorithm on compressed data structure, and our $$O(m+n)$$ compressed data structure.
+![data structure]({{site.url}}/assets/100k.png "Logo Title Text 1")
+![data structure]({{site.url}}/assets/10m.png "Logo Title Text 1")
