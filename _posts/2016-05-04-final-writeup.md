@@ -29,6 +29,13 @@ We have put up separate writeups for each optimization technique we used. __Deta
 - [Compressed Data Structure](http://pavelkang.github.io/418finalproject/2016/datacompression/)
 - [Locality Sensitive Hashing](http://pavelkang.github.io/418finalproject/2016/nearestneighbor/)
 
+# More Results
+- We measured the the performance using the ```CycleTimer.h``` in all previous assignments.
+- For the matrix solution, the precise setup is in the slides above. For the compressed data structure and nearest neighbor search implementations, they are tested on latedays cluster.
+- Graphs can be found in those reports.
+- We have datasets from Movielens ranging from 100k to 10m.
+- As to what limits our speedup, please read those reports above.
+
 # References
 
 - [Streaming Similarity Search over one Billion Tweets using Parallel Locality-Sensitive Hashing](http://istc-bigdata.org/plsh/docs/plsh_paper.pdf)

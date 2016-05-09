@@ -45,4 +45,9 @@ for (int i = u_start; i < u_end; i+=2) {                                        
 ```
 
 ## Results
+
+For the union find implementation which follows the ```lsh_kernel``` implementation, we implemented using thrust vector and related functions such as ```sequence```, ```sort```, etc. However, union find is inherently sequential.
+
 Preprocessing takes 1.1x ~ 2.5x of the compressed data structure implementation on different datasets. After preprocessing, recommend() query takes almost no time.
+
+__Analysis__: There are several bottlenecks. First of all, we have to pack numbers in each band into a struct and put the struct in a thrust vector. Second of all, to avoid $$O(n^2)$$ pairwise band comparison, we decided to sort such that same bands are always adjacent to each other. This sorting step is very slow. However, we have not yet come up with a solution to solve iet.
