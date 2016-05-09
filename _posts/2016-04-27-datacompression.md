@@ -10,6 +10,9 @@ One of the biggest challenge for improving the performance of a recommendation e
 
 We designed and implemented a compact data structure which allows collaborative filtering algorithms to take advantage of memory locality. We have never read anything in literature about compressed data structure in collaborative filtering.
 
+![data structure]({{site.url}}/assets/illustration.svg "Logo Title Text 1")
+On the right, we have an illustration of memory footprint of collaborative filtering on a matrix, and our compressed data structure on the left. Our data structure is able to convert random memory accesses to contiguous memory accesses.
+
 ## Data Structure
 
 ![data structure]({{site.url}}/assets/illustration.svg "Logo Title Text 1")
@@ -89,6 +92,8 @@ To calculate item preferences, instead of finding common items, we want to find 
 ```
 
 ## Performance
+
+
 
 We have tested four implementations on two datasets of size 100k and 10m. The four implementations are: a serial CPU version, a naive CUDA implementation, a $$O(mn)$$ naive algorithm on compressed data structure, and our $$O(m+n)$$ compressed data structure.
 ![data structure]({{site.url}}/assets/100k.png "Logo Title Text 1")

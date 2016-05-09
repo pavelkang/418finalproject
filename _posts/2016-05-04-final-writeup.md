@@ -17,10 +17,13 @@ Our deliverables will include:
 
 - Performance graph of multiple algorithms we have implemented.
 
+Here is a link to our final presentation slides:
+
+- [Slides](https://drive.google.com/file/d/0B4lG-7EeCB0cVV9WQnFNOEtXUDg/view?usp=sharing)
 
 # Background and Approach and Results
 
-We have put up separate writeups for each optimization technique we used. Detailed explanations of the optimization techniques, algorithms, designs, and results can be found in the following posts:
+We have put up separate writeups for each optimization technique we used. __Detailed explanations__ of the optimization techniques, algorithms, designs, and results can be found in the __following posts__, __please read__:
 
 - [CUDA Matrix](http://pavelkang.github.io/418finalproject/2016/cuda/)
 - [Compressed Data Structure](http://pavelkang.github.io/418finalproject/2016/datacompression/)
@@ -31,3 +34,7 @@ We have put up separate writeups for each optimization technique we used. Detail
 - [Streaming Similarity Search over one Billion Tweets using Parallel Locality-Sensitive Hashing](http://istc-bigdata.org/plsh/docs/plsh_paper.pdf)
 - [Large-scale Parallel Collaborative Filtering for the Netflix Prize](http://www.grappa.univ-lille3.fr/~mary/cours/stats/centrale/reco/paper/MatrixFactorizationALS.pdf)
 - [Standford Data Mining Textbook](http://infolab.stanford.edu/~ullman/mmds/ch3.pdf)
+
+# List of work
+
+We have done equal amount of work for this project
