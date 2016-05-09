@@ -21,3 +21,28 @@ Here is an illustration of the parallel locality sensitive hashing algorithm we 
 ![Locality Sensitive Hashing]({{site.url}}/assets/lsh.svg "Logo Title Text 1")
 
 ## Parallel Min-hashing
+
+This is the original min-hashing algorithm from the [Standford Data Mining Textbook](http://infolab.stanford.edu/~ullman/mmds/ch3.pdf). We have developed our own parallel version of this algorithm using compressed data structure. The original min-hashing algorithm is item-major, we have modified it to user-major and fit it with our compressed data structure.
+
+- Step 1. Calculate the mean rating for each user and "binarize" each user's rating using his mean using ```mean_kernel``` and ```binarize_kernel```:
+
+
+```c
+  mean_kernel<<<UPDIV(USER_SIZE, tpb), tpb>>>(compact_data_cuda, compact_index_cuda, mean_cuda);
+  binarize<<<UPDIV(USER_SIZE, tpb), tpb>>>(compact_data_cuda, compact_index_cuda, mean_cuda);
+```
+- Step 2. Calculate a hashed function matrix:
+
+```c
+mean_kernel<<<UPDIV(USER_SIZE, tpb), tpb>>>(compact_data_cuda, compact_index_cuda, mean_cuda);
+binarize<<<UPDIV(USER_SIZE, tpb), tpb>>>(compact_data_cuda, compact_index_cuda, mean_cuda);
+```
+
+- Step 3. We run ```lsh_kernel``` for each user
+
+```c
+for (int i = u_start; i < u_end; i+=2) {                                                                              int item = compact_data[i];                                                                                         int rating = compact_data[i+1];                                                                                     if (rating == 0)                                                                                                      continue;                                                                                                         for (int j = 0; j < 100; j++) {                                                                                       // for all possible hash functions                                                                                  int hashed_item = hash[item * 100 + j];                                                                             sigs[tid * 100 + j] = min(sigs[tid * 100 + j], hashed_item);                                                      }                                                                                                                 }
+```
+
+## Results
+Preprocessing takes 1.1x ~ 2.5x of the compressed data structure implementation on different datasets. After preprocessing, recommend() query takes almost no time.
