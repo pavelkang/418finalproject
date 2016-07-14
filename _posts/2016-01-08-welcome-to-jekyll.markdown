@@ -54,45 +54,45 @@ In a word, this is our roadmap:
 ![roadmap]({{site.url}}/assets/overview.svg "Logo Title Text 1")
 
 
-<!-- __Matrix Factorization__ -->
+__Matrix Factorization__
 
-<!-- The idea of matrix factorization is that we have $$ M $$, where each row represents a __user__, and each column represents an __item__, and entry $$M[u][i]$$ represents the rating of user $$u$$ to item $$i$$. What we will be implementing is a matrix factorization algorithm to factor $$M$$ into user matrix $$U$$ and item matrix $$I$$, where $$U$$ and $$I$$ essentially represents the inherent attributes of each user and item. This algorithm by [Simon Funk]((http://sifter.org/~simon/journal/20061211.html) wins the Netflix-prize. Here is an example to illustrate how it works: -->
-<!-- Imagine our $$M$$ is: -->
+The idea of matrix factorization is that we have $$ M $$, where each row represents a __user__, and each column represents an __item__, and entry $$M[u][i]$$ represents the rating of user $$u$$ to item $$i$$. What we will be implementing is a matrix factorization algorithm to factor $$M$$ into user matrix $$U$$ and item matrix $$I$$, where $$U$$ and $$I$$ essentially represents the inherent attributes of each user and item. This algorithm by [Simon Funk]((http://sifter.org/~simon/journal/20061211.html) wins the Netflix-prize. Here is an example to illustrate how it works:
+Imagine our $$M$$ is:
 
-<!-- $$ -->
-<!--  \left[ -->
-<!--  \begin{array}{cccc} -->
-<!--  & \text{Titanic} & \text{Interstellar} & \text{The Notebook}\\ -->
-<!--  Alice & 5.0 & 2.0 & 4.0\\ -->
-<!--  Bob & 2.0 & 5.0 & 1.0\\ -->
-<!--     \end{array} -->
-<!-- \right] -->
-<!-- $$ -->
+$$
+ \left[
+ \begin{array}{cccc}
+ & \text{Titanic} & \text{Interstellar} & \text{The Notebook}\\
+ Alice & 5.0 & 2.0 & 4.0\\
+ Bob & 2.0 & 5.0 & 1.0\\
+    \end{array}
+\right]
+$$
 
-<!-- Using an online calculator, we get $$U$$ to be: -->
+Using an online calculator, we get $$U$$ to be:
 
-<!-- $$ -->
-<!--  \left[ -->
-<!--  \begin{array}{ccc} -->
-<!--  Alice & 1.0 & 0.0\\ -->
-<!--  Bob & 0.4 & 1.0 &\\ -->
-<!--     \end{array} -->
-<!-- \right] -->
-<!-- $$ -->
+$$
+ \left[
+ \begin{array}{ccc}
+ Alice & 1.0 & 0.0\\
+ Bob & 0.4 & 1.0 &\\
+    \end{array}
+\right]
+$$
 
-<!-- We get $$I$$ to be: -->
+We get $$I$$ to be:
 
-<!-- $$ -->
-<!--  \left[ -->
-<!--  \begin{array}{ccc} -->
-<!--  \text{Titanic} & \text{Interstellar} & \text{The Notebook}\\ -->
-<!--  5.0 & 2.0 & 4.0\\ -->
-<!--  0.0 & 4.2 & -0.6\\ -->
-<!--     \end{array} -->
-<!-- \right] -->
-<!-- $$ -->
+$$
+ \left[
+ \begin{array}{ccc}
+ \text{Titanic} & \text{Interstellar} & \text{The Notebook}\\
+ 5.0 & 2.0 & 4.0\\
+ 0.0 & 4.2 & -0.6\\
+    \end{array}
+\right]
+$$
 
-<!-- Matrix factorization _automatically_ extracts the features of each movie, and each person's favorite feature. In this example, it is apparent that the two features are _romance_, and _adventure_. Thus, the romantic movies have a large value for romance feature and small value for adventure feature. And Alice has a large value for romance, and Bob has a large value for adventure. -->
+Matrix factorization _automatically_ extracts the features of each movie, and each person's favorite feature. In this example, it is apparent that the two features are _romance_, and _adventure_. Thus, the romantic movies have a large value for romance feature and small value for adventure feature. And Alice has a large value for romance, and Bob has a large value for adventure.
 
 ## Resources
 
