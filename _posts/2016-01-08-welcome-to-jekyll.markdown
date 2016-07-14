@@ -54,7 +54,7 @@ In a word, this is our roadmap:
 ![roadmap]({{site.url}}/assets/overview.svg "Logo Title Text 1")
 
 
-__Matrix Factorization__
+__Matrix Factorization__ <a id="abcd" name="abcd"></a>
 
 The idea of matrix factorization is that we have $$ M $$, where each row represents a __user__, and each column represents an __item__, and entry $$M[u][i]$$ represents the rating of user $$u$$ to item $$i$$. What we will be implementing is a matrix factorization algorithm to factor $$M$$ into user matrix $$U$$ and item matrix $$I$$, where $$U$$ and $$I$$ essentially represents the inherent attributes of each user and item. This algorithm by [Simon Funk]((http://sifter.org/~simon/journal/20061211.html) wins the Netflix-prize. Here is an example to illustrate how it works:
 Imagine our $$M$$ is:
